@@ -19,6 +19,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .megaphone {
@@ -30,7 +31,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  flex-wrap: wrap; /* Wrap if needed */
+  padding: 16px 24px;
   background-color: #fff;
 }
 
@@ -38,8 +40,9 @@
 .logo {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 .logo-icon {
@@ -57,11 +60,20 @@
 }
 
 /* Navigation links */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .nav-links a {
-  margin: 0 12px;
   text-decoration: none;
   color: black;
   font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -81,9 +93,51 @@
   background-color: #fff;
   color: #000;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
+/* Hover effect */
 .contact-button:hover {
   background-color: #000;
   color: #fff;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .contact-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import './HeroSection.css';
+import React from "react";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
@@ -12,12 +12,15 @@ const HeroSection = () => {
       <div className="hero-overlay">
         <div className="hero-content">
           <h1>
-            Solve your teacher vacancy<br />
-            problem without sacrificing<br />
+            Welcome to Iqsync - 
+            <br />
+            Your Gateway to Smart Learning!
+            <br />
             teaching quality.
           </h1>
           <p>
-            Bring remarkable <span className="highlight">LIVE</span> teaching into any classroom.
+            Bring remarkable <span className="highlight">LIVE</span> teaching
+            into any classroom.
           </p>
           <div className="hero-buttons">
             <button className="btn-primary">See Courses</button>

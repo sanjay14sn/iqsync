@@ -1,5 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
+import "./CourseGrid.css"; // ✅ Add this line for styling
 
 const courses = [
   {
@@ -26,25 +27,35 @@ const courses = [
 
 const CourseGrid = () => {
   return (
-    <div style={styles.grid}>
-      {courses.map((course, index) => (
-        <CourseCard
-          key={index}
-          title={course.title}
-          image={course.image}
-          languages={course.languages}
-        />
-      ))}
+    <div style={styles.wrapper}>
+      <div style={styles.grid}>
+        {courses.map((course, index) => (
+          <CourseCard
+            key={index}
+            title={course.title}
+            image={course.image}
+            languages={course.languages}
+          />
+        ))}
+      </div>
+
+      {/* ✅ Button added here */}
+      <button className="explore-button">Explore All Programs</button>
     </div>
   );
 };
 
 const styles = {
+  wrapper: {
+    textAlign: "center",
+    padding: "40px 20px",
+  },
   grid: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    padding: "20px",
+    gap: "20px",
+    marginBottom: "30px",
   },
 };
 
