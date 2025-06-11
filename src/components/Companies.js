@@ -3,23 +3,23 @@ import './companies.css';
 
 const companies = [
   { name: 'tcs', logo: '/images/tcs.png' },
-  { name: 'phonepe', logo: '/logos/phonepe.png' },
-  { name: 'oracle', logo: '/logos/oracle.png' },
-  { name: 'presidio', logo: '/logos/presidio.png' },
-  { name: 'appbroda', logo: '/logos/appbroda.png' },
-  { name: 'cleartax', logo: '/logos/cleartax.png' },
-  { name: 'avasoft', logo: '/logos/avasoft.png' },
-  { name: 'ecosystem', logo: '/logos/ecosystem.png' },
-  { name: 'sap', logo: '/logos/sap.png' },
-  { name: 'mcafee', logo: '/logos/mcafee.png' },
-  { name: 'amazon', logo: '/logos/amazon.png' },
-  { name: 'ciena', logo: '/logos/ciena.png' },
-  { name: 'schneider', logo: '/logos/schneider.png' },
-  { name: 'datawrkz', logo: '/logos/datawrkz.png' },
-  { name: 'deloitte', logo: '/logos/deloitte.png' },
-  { name: 'anandrathi', logo: '/logos/anandrathi.png' },
-  { name: 'mjunction', logo: '/logos/mjunction.png' },
-  { name: 'cognizant', logo: '/logos/cognizant.png' }
+  { name: 'phonepe', logo: '/images/phonepe.jpeg' },
+  { name: 'oracle', logo: '/images/oracle.png' },
+  { name: 'presidio', logo: '/images/presidio.png' },
+  { name: 'appbroda', logo: '/images/myntra.png' },
+  { name: 'cleartax', logo: '/images/Wipro.png' },
+  { name: 'avasoft', logo: '/images/Infosys.png' },
+  { name: 'ecosystem', logo: '/images/hcl.png' },
+  { name: 'sap', logo: '/images/sap.png' },
+  { name: 'mcafee', logo: '/images/macaffe.png' },
+  { name: 'amazon', logo: '/images/amazon.png' },
+  { name: 'ciena', logo: '/images/ciena.png' },
+  { name: 'schneider', logo: '/images/schneider.png' },
+  { name: 'datawrkz', logo: '/images/accenture.png' },
+  { name: 'deloitte', logo: '/images/deloitte.png' },
+  { name: 'anandrathi', logo: '/images/accenture.png' },
+  { name: 'mjunction', logo: '/images/mjunction.png' },
+  { name: 'cognizant', logo: '/images/Cognizant.jpg' }
 ];
 
 const Companies = () => {
