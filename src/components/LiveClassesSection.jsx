@@ -1,10 +1,11 @@
 import React from "react";
+import "./LiveClassesSection.css"; // Import the CSS for blinking
 
 const LiveClassesSection = () => {
   return (
     <div style={styles.container}>
       <div style={styles.titleWrapper}>
-        <span style={styles.redDot}></span>
+        <span style={styles.redDot} className="blinking-dot"></span>
         <h2 style={styles.title}>Live Classes + Placement Guidance</h2>
       </div>
       <p style={styles.subtitle}>

@@ -1,7 +1,11 @@
-import React from "react";
-import "./Header.css"; // CSS for styling
+import React, { useState } from "react";
+import "./Header.css";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
   return (
     <div className="header-wrapper">
       {/* Top banner */}
@@ -12,14 +16,18 @@ const Header = () => {
         </span>
       </div>
 
-      {/* Main navbar */}
+      {/* Navbar */}
       <div className="navbar">
         <div className="logo">
           <span className="logo-icon">➤</span>
           <span className="logo-text">IQ Sync<sup>®</sup></span>
         </div>
 
-        <div className="nav-links">
+        {/* Dashboard/menu icon for small screens */}
+        <div className="dashboard-icon" onClick={toggleMenu}>☰</div>
+
+        {/* Navigation links */}
+        <div className={`nav-links ${isMenuOpen ? "show" : ""}`}>
           <a href="/">Home</a>
           <a href="/courses">Courses</a>
           <a href="/certifications">Certifications</a>
@@ -28,6 +36,7 @@ const Header = () => {
           <a href="/contact">Contact Us</a>
         </div>
 
+        {/* Contact button (hidden on mobile) */}
         <div className="contact-button">
           <span role="img" aria-label="phone">📞</span>
           <span>Talk to us</span>
