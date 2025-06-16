@@ -11,7 +11,7 @@ import Placements from "./pages/placements/placements";
 import Certifications from "./pages/certifications/certifications.js";
 import Companies from "./components/Companies.js";
 import Footer from "./components/footer.js";
-import ProgramList from "./pages/programs/ProgramList.jsx"; // ✅ Correct import
+import ProgramList from "./pages/programs/ProgramList.jsx";
 
 function Home() {
   return (
@@ -31,7 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/programs" element={<ProgramList />} /> {/* ✅ Fixed */}
+        <Route path="/programs" element={<ProgramList />} />
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/placements" element={<Placements />} />
