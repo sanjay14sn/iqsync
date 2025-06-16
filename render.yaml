@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: your-app-name
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: build
+    redirects:
+      - source: /.*       # redirect all paths
+        destination: /index.html
+        statusCode: 200

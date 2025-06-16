@@ -1,6 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import navigate hook
 import CourseCard from "./CourseCard";
-import "./CourseGrid.css"; // ✅ Add this line for styling
+import "./CourseGrid.css";
 
 const courses = [
   {
@@ -26,6 +27,12 @@ const courses = [
 ];
 
 const CourseGrid = () => {
+  const navigate = useNavigate(); // ✅ initialize
+
+  const handleExploreClick = () => {
+    navigate("/programs"); // ✅ navigate to /programs
+  };
+
   return (
     <div style={styles.wrapper}>
       <div style={styles.grid}>
@@ -39,11 +46,13 @@ const CourseGrid = () => {
         ))}
       </div>
 
-      {/* ✅ Button added here */}
-      <button className="explore-button">Explore All Programs</button>
+      <button className="explore-button" onClick={handleExploreClick}>
+        Explore All Programs
+      </button>
     </div>
   );
 };
+
 
 const styles = {
   wrapper: {

@@ -1,17 +1,17 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import LiveClassesSection from "./components/LiveClassesSection";
 import CourseGrid from "./components/CourseGrid";
-import ContactUs from "./components/contact/ContactUs";
-import Courses from "./components/courses/courses.js";
-import Pricing from "./components/pricing/pricing.js";
-import Placements from "./components/placements/placements";
-import Certifications from "./components/certifications/certifications.js";
+import ContactUs from "./pages/contact/ContactUs";
+import Courses from "./pages/courses/courses.js";
+import Pricing from "./pages/pricing/pricing.js";
+import Placements from "./pages/placements/placements";
+import Certifications from "./pages/certifications/certifications.js";
 import Companies from "./components/Companies.js";
-import Footer from "./components/footer.js"; // ✅ Import Footer
+import Footer from "./components/footer.js";
+import ProgramList from "./pages/programs/ProgramList.jsx"; // ✅ Correct import
 
 function Home() {
   return (
@@ -31,12 +31,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/programs" element={<ProgramList />} /> {/* ✅ Fixed */}
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/placements" element={<Placements />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
-      <Footer /> {/* ✅ Add Footer here so it shows on all pages */}
+      <Footer />
     </Router>
   );
 }
