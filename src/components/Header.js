@@ -10,10 +10,8 @@ const Header = () => {
     <div className="header-wrapper">
       {/* Top banner */}
       <div className="top-banner">
-        <span role="img" aria-label="megaphone" className="megaphone">📣</span>
-        <span className="banner-text">
-          Master Gen AI Fundamentals & get certified by Microsoft at ₹499
-        </span>
+        
+       
       </div>
 
       {/* Navbar */}
